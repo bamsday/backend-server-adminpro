@@ -12,7 +12,7 @@ exports.verificaToken = function(req, res, next) {
 
     var token = req.query.token;
 
-    jwt.verify(token, SEED, (err, decoed) => {
+    jwt.verify(token, SEED, (err, decoded) => {
 
         if (err) {
             res.status(401).json({
